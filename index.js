@@ -12,7 +12,7 @@ const stat = util.promisify(fs.stat);
 const optimizers = [
 	['cssnano', css => cssnano.process(css, {}).then(r => r.css)],
 	['clean-css', css => new CleanCSS({returnPromise: true}).minify(css).then(r => r.styles)],
-	['csso', css => Promise.resolve(csso.minify(css).css)]
+	['csso', css => Promise.resolve().then(() => csso.minify(css).css)]
 ];
 
 const samplePaths = [
@@ -21,7 +21,8 @@ const samplePaths = [
 	'font-awesome/css/font-awesome.css',
 	'leaflet/dist/leaflet.css',
 	'normalize.css/normalize.css',
-	'reset.css/reset.css'
+	'reset.css/reset.css',
+	'universal.css/universal.css'
 ];
 
 (async() => {
@@ -32,7 +33,8 @@ const samplePaths = [
 
 		const st = await stat('./node_modules/' + s);
 
-		const lens = await Promise.all(optimizers.map(([name, fn]) => fn(buf + '').then(x => x.length)));
+		const lens = await Promise.all(optimizers.map(([name, fn]) => fn(buf + '').then(x => x.length).catch(e => -1)));
+		
 		return [st.size, lens];
 	}));
 
@@ -45,7 +47,8 @@ const samplePaths = [
 
 	const body = `<tbody>
 	${data.map(([oriSize, lens], i) => {
-		const [min, max] = [Math.min(...lens), Math.max(...lens)];
+		const validLens = lens.filter(x => x > 0);
+		const [min, max] = [Math.min(...validLens), Math.max(...validLens)];
 		const sampleName = samplePaths[i].split('/', 1)[0];
 		return `<tr><td><strong>${sampleName}</strong> - <span >${oriSize}</span></td>${lens.map(len => `<td class="${len===min ? 'min' : len===max ? 'max' : ''}">${len}</td>`).join('')}</tr>`
 	}).join('\n')}
