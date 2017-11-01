@@ -1,11 +1,15 @@
 <style>
-	body {font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+	body {font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;display: flex;flex-direction: column;align-items: center;}
+	a {text-decoration: initial}
 	* {box-sizing: border-box}
-	td {background: #a7a7a7; color: white; padding: 4px 10px;}
+	td {padding: 4px 10px;}
+	td:first-child {background: #eee;}
 	th {padding: 4px 15px;}
+	.m {background: #8a8a8a; color: white;}
 	.min {background: green}
-	.max {background: salmon}
+	.max {background: #f44336}
 </style>
+<h2><a href="https://github.com/caub/css-min-bench">CSS minifiers benchmark</a></h2>
 <table>
 	<thead>
 		<tr>
@@ -16,12 +20,22 @@
 </tr>
 	</thead>
 	<tbody>
-	<tr><td><strong>bootstrap</strong> - <span >146010</span></td><td class="min">114610</td><td class="max">120521</td><td class="">117068</td></tr>
-<tr><td><strong>bulma</strong> - <span >208972</span></td><td class="min">163514</td><td class="max">169658</td><td class="">164451</td></tr>
-<tr><td><strong>font-awesome</strong> - <span >37414</span></td><td class="">30791</td><td class="min">30591</td><td class="max">30939</td></tr>
-<tr><td><strong>leaflet</strong> - <span >14061</span></td><td class="min">10204</td><td class="">10552</td><td class="max">10595</td></tr>
-<tr><td><strong>normalize.css</strong> - <span >7719</span></td><td class="">2254</td><td class="max">2276</td><td class="min">2089</td></tr>
-<tr><td><strong>reset.css</strong> - <span >1092</span></td><td class="max">773</td><td class="max">773</td><td class="min">747</td></tr>
-<tr><td><strong>universal.css</strong> - <span >5020671</span></td><td class="min">4458087</td><td class="max">4458162</td><td class="">4458099</td></tr>
+	<tr><td><strong>bootstrap</strong> - <span >146010</span></td><td class="m min">114610</td><td class="m max">120521</td><td class="m ">117068</td></tr>
+<tr><td><strong>blueprint-css</strong> - <span >22912</span></td><td class="m min">16044</td><td class="m max">18568</td><td class="m ">18452</td></tr>
+<tr><td><strong>bulma</strong> - <span >208972</span></td><td class="m min">163514</td><td class="m max">169658</td><td class="m ">164451</td></tr>
+<tr><td><strong>scooter-css</strong> - <span >44638</span></td><td class="m min">34382</td><td class="m max">35310</td><td class="m ">34814</td></tr>
+<tr><td><strong>purecss</strong> - <span >31931</span></td><td class="m ">17101</td><td class="m min">16778</td><td class="m max">17473</td></tr>
+<tr><td><strong>wingcss</strong> - <span >7949</span></td><td class="m min">4756</td><td class="m max">5016</td><td class="m ">4931</td></tr>
+<tr><td><strong>tachyons</strong> - <span >124338</span></td><td class="m min">81601</td><td class="m max">84606</td><td class="m ">83690</td></tr>
+<tr><td><strong>pills</strong> - <span >6006</span></td><td class="m min">4691</td><td class="m max">4777</td><td class="m ">4751</td></tr>
+<tr><td><strong>material-design-lite</strong> - <span >357660</span></td><td class="m min">135704</td><td class="m max">141436</td><td class="m ">137458</td></tr>
+<tr><td><strong>materialize-css</strong> - <span >182764</span></td><td class="m min">132344</td><td class="m max">139275</td><td class="m ">135199</td></tr>
+<tr><td><strong>milligram</strong> - <span >10146</span></td><td class="m min">8458</td><td class="m max">8493</td><td class="m ">8490</td></tr>
+<tr><td><strong>font-awesome</strong> - <span >37414</span></td><td class="m ">30791</td><td class="m min">30591</td><td class="m max">30939</td></tr>
+<tr><td><strong>leaflet</strong> - <span >14061</span></td><td class="m min">10204</td><td class="m ">10552</td><td class="m max">10595</td></tr>
+<tr><td><strong>normalize.css</strong> - <span >7719</span></td><td class="m ">2254</td><td class="m max">2276</td><td class="m min">2089</td></tr>
+<tr><td><strong>sanitize.css</strong> - <span >10794</span></td><td class="m ">3031</td><td class="m max">3044</td><td class="m min">2848</td></tr>
+<tr><td><strong>reset.css</strong> - <span >1092</span></td><td class="m max">773</td><td class="m max">773</td><td class="m min">747</td></tr>
 </tbody>
+<tr><td><strong>universal.css</strong> - <span >5020671</span></td><td class="m min">4458087</td><td class="m max">4458162</td><td class="m">4458099</td></tr>
 </table>

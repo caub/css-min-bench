@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/caub/css-min-bench#readme",
   "devDependencies": {
+    "blueprint-css": "^2.4.1",
     "bootstrap": "^3.3.7",
     "bulma": "^0.6.0",
     "clean-css": "^4.1.9",
@@ -31,8 +32,17 @@
     "csso": "^3.3.1",
     "font-awesome": "^4.7.0",
     "leaflet": "^1.2.0",
+    "material-design-lite": "^1.3.0",
+    "materialize-css": "^0.100.2",
+    "milligram": "^1.3.0",
     "normalize.css": "^7.0.0",
-    "reset.css": "^2.0.2"
+    "pills": "^1.0.1",
+    "purecss": "^1.0.0",
+    "reset.css": "^2.0.2",
+    "sanitize.css": "^5.0.0",
+    "scooter-css": "^2.0.0",
+    "tachyons": "^4.9.0",
+    "wingcss": "^1.0.0-beta"
   },
   "dependencies": {
     "node-fetch": "^1.7.3"
