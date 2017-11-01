@@ -1,0 +1,37 @@
+{
+  "name": "css-min-bench",
+  "version": "1.0.0",
+  "description": "CSS minifiers benchmark",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caub/css-min-bench.git"
+  },
+  "keywords": [
+    "CSS",
+    "minification",
+    "minify",
+    "optimize",
+    "optimization"
+  ],
+  "author": "caub",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caub/css-min-bench/issues"
+  },
+  "homepage": "https://github.com/caub/css-min-bench#readme",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "bulma": "^0.6.0",
+    "clean-css": "^4.1.9",
+    "cssnano": "^3.10.0",
+    "csso": "^3.3.1",
+    "font-awesome": "^4.7.0",
+    "leaflet": "^1.2.0",
+    "normalize.css": "^7.0.0",
+    "reset.css": "^2.0.2"
+  }
+}
