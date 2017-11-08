@@ -1,3 +1,6 @@
-# CSS minification benchmark
+# [CSS minifiers benchmark](https://caub.github.io/css-min-bench)
 
-like [css-minification-benchmark](https://goalsmashers.github.io/css-minification-benchmark/) in simpler
+
+see also:
+- [css-minifier-tests](https://github.com/ben-eb/css-minifier-tests)
+- [css-minification-benchmark](https://goalsmashers.github.io/css-minification-benchmark/)
